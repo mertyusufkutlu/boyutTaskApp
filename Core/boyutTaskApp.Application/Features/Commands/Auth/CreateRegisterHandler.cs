@@ -26,8 +26,8 @@ public class CreateRegisterHandler : IRequestHandler<RegisterCommandRequest, boo
             var minValue = (int)Math.Pow(10, VerificationCodeLength - 1);
             var maxValue = (int)Math.Pow(10, VerificationCodeLength) - 1;
             var key = random.Next(minValue, maxValue).ToString().PadLeft(VerificationCodeLength, '0');
-            var turkishMessage = $"Story Genius Doğrulama Kodunuz: {key} Lütfen kimseyle paylaşmayınız.";
-            var englishMessage = $"Story Genius Verification Code: {key} Please do not share with anyone.";
+            var turkishMessage = $"Boyut Bilgisayar Doğrulama Kodunuz: {key} Lutfen kimseyle paylaşmayınız.";
+            var englishMessage = $"Boyut Bilgisayar Verification Code: {key} Please do not share with anyone.";
             var countryCode = request.CountryCode;
             var messageContent = countryCode == "TUR" ? turkishMessage : englishMessage;
             await _mediator.Send((new SmsSendCommandRequest(request.PhoneNumber, messageContent)), cancellationToken);

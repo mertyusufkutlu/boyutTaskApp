@@ -11,6 +11,11 @@ namespace boyutTaskAppAPI.Persistence.Contexts
             //IoC Conteiner'da dolduralacak
         }
         public DbSet<User> Users { get; set; } = null!;
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<ProductGroup> ProductGroups { get; set; }
+        public DbSet<CustomerBasket> CustomerBaskets { get; set; }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

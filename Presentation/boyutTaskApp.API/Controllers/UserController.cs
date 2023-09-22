@@ -1,12 +1,15 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using boyutTaskAppAPI.Applicaton.Base;
+using boyutTaskAppAPI.Applicaton.Base.GenericAuth;
 using boyutTaskAppAPI.Applicaton.Features.Commands.User;
+using Microsoft.AspNetCore.Authorization;
 
 namespace boyutTaskAppAPI.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[GenericAuthorize("Login")]
 public class UserController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -16,6 +19,7 @@ public class UserController : ControllerBase
         _mediator = mediator;
     }
 
+    [AllowAnonymous]
     [Route("create")]
     [HttpPost]
     public async Task<IActionResult> UserCreate([FromBody] UserCreateRequest userCreateRequest)

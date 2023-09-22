@@ -1,22 +1,24 @@
-﻿using Microsoft.Extensions.Options;
+﻿using System.Net.Http;
+using boyutTaskAppAPI.Applicaton.Settings;
+using Microsoft.Extensions.Options;
 
-namespace boyutTaskAppAPI.Applicaton.Settings;
+namespace OneDose.ClaimIdentity.Model;
 
-public class SsoParameters
+public class SsoParameters : ISsoParameters
 {
     private readonly KeyCloakSettings _keyCloakSettings;
 
-    public SsoParameters(IOptions<Settings> settings)
-    {
-        _keyCloakSettings = settings.Value.Keycloak;
-        AccessTokenBodyName = _keyCloakSettings.AccessTokenBodyName;
-        ClientSecretBodyName = _keyCloakSettings.ClientSecretBodyName;
-        ClientSecretBodyValue = _keyCloakSettings.ClientSecretBodyValue;
-        ClientIdBodyName = _keyCloakSettings.ClientIdBodyName;
-        ClientIdBodyValue = _keyCloakSettings.ClientIdBodyValue;
-        ValidationUrl = _keyCloakSettings.ValidationUrl;
-        ValidationContentType = _keyCloakSettings.ValidationContentType;
-    }
+    // public SsoParameters(IOptions<Settings> settings)
+    // {
+    //     _keyCloakSettings = settings.Value.Keycloak;
+    //     AccessTokenBodyName = _keyCloakSettings.AccessTokenBodyName;
+    //     ClientSecretBodyName = _keyCloakSettings.ClientSecretBodyName;
+    //     ClientSecretBodyValue = _keyCloakSettings.ClientSecretBodyValue;
+    //     ClientIdBodyName = _keyCloakSettings.ClientIdBodyName;
+    //     ClientIdBodyValue = _keyCloakSettings.ClientIdBodyValue;
+    //     ValidationUrl = _keyCloakSettings.ValidationUrl;
+    //     ValidationContentType = _keyCloakSettings.ValidationContentType;
+    // }
     public string AccessTokenBodyName { get; set; }
     public string ClientSecretBodyName { get; set; }
     public string ClientSecretBodyValue { get; set; }

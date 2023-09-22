@@ -4,9 +4,10 @@ using boyutTaskAppAPI.Domain.Entities.Common;
 
 namespace boyutTaskAppAPI.Domain.Entities;
 
-[Table(nameof(User), Schema = "boyut_be")]
+[Table(nameof(User), Schema = "sg_be")]
 public class User : BaseEntity
 {
+
     [MaxLength(250)]
     public string? Email { get; set; }
 

@@ -1,3 +1,4 @@
+using boyutTaskAppAPI.API;
 using Microsoft.OpenApi.Models;
 using boyutTaskAppAPI.Applicaton;
 using boyutTaskAppAPI.Applicaton.Settings;
@@ -71,8 +72,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.CustomSchemaIds(type => type.FullName);
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Story Genius Api", Version = "v1" });
-    c.SwaggerDoc("v1-internal", new OpenApiInfo { Title = "Story Genius Api" + " Internal", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Boyut Bilgisayar Api", Version = "v1" });
+    c.SwaggerDoc("v1-internal", new OpenApiInfo { Title = "Boyut Bilgisayar Api" + " Internal", Version = "v1" });
 
     var securityScheme = new OpenApiSecurityScheme
     {
@@ -99,6 +100,7 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
+// app.UseMiddleware<AuthMiddleware>();
 
 
 if (app.Environment.IsDevelopment())
