@@ -1,0 +1,15 @@
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\bin\Debug\net6.0\boyutTaskApp.Applicaton.deps.json
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\bin\Debug\net6.0\boyutTaskApp.Applicaton.dll
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\bin\Debug\net6.0\boyutTaskApp.Applicaton.pdb
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\bin\Debug\net6.0\boyutTaskApp.Domain.dll
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\bin\Debug\net6.0\boyutTaskApp.Domain.pdb
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\obj\Debug\net6.0\boyutTaskApp.Applicaton.csproj.AssemblyReference.cache
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\obj\Debug\net6.0\boyutTaskApp.Applicaton.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\obj\Debug\net6.0\boyutTaskApp.Applicaton.AssemblyInfoInputs.cache
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\obj\Debug\net6.0\boyutTaskApp.Applicaton.AssemblyInfo.cs
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\obj\Debug\net6.0\boyutTaskApp.Applicaton.csproj.CoreCompileInputs.cache
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\obj\Debug\net6.0\boyutTaskApp.Applicaton.csproj.CopyComplete
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\obj\Debug\net6.0\boyutTaskApp.Applicaton.dll
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\obj\Debug\net6.0\refint\boyutTaskApp.Applicaton.dll
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\obj\Debug\net6.0\boyutTaskApp.Applicaton.pdb
+C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Applicaton\obj\Debug\net6.0\ref\boyutTaskApp.Applicaton.dll

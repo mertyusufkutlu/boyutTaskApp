@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4C8D817E-3096-473F-B691-32E96181B0A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "boyutTaskApp.Domain", "Core\boyutTaskApp.Domain\boyutTaskApp.Domain.csproj", "{DC14FC91-0666-485E-8586-F0A6FF47E891}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "boyutTaskApp.Application", "Core\boyutTaskApp.Application\boyutTaskApp.Application.csproj", "{5982B97E-C432-46CF-8FA5-A44CF9F66355}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{5246AB86-EC83-4DA1-9076-4D2F6CFD7EC2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "boyutTaskApp.Infrastructure", "Infrastructure\boyutTaskApp.Infrastructure\boyutTaskApp.Infrastructure.csproj", "{CEC8D73A-BADF-4DA6-84AC-A66AAD782EEF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "boyutTaskApp.Persistence", "Infrastructure\boyutTaskApp.Persistence\boyutTaskApp.Persistence.csproj", "{6A04667D-1185-4F42-B41D-C2E35C5BC3DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{E0FA4F3F-82D4-4C52-830B-8B7EE3660E29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "boyutTaskApp.API", "Presentation\boyutTaskApp.API\boyutTaskApp.API.csproj", "{84D441C1-F4C7-4ECA-95CB-C5684561CA1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC14FC91-0666-485E-8586-F0A6FF47E891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC14FC91-0666-485E-8586-F0A6FF47E891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC14FC91-0666-485E-8586-F0A6FF47E891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC14FC91-0666-485E-8586-F0A6FF47E891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5982B97E-C432-46CF-8FA5-A44CF9F66355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5982B97E-C432-46CF-8FA5-A44CF9F66355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5982B97E-C432-46CF-8FA5-A44CF9F66355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5982B97E-C432-46CF-8FA5-A44CF9F66355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEC8D73A-BADF-4DA6-84AC-A66AAD782EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC8D73A-BADF-4DA6-84AC-A66AAD782EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC8D73A-BADF-4DA6-84AC-A66AAD782EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC8D73A-BADF-4DA6-84AC-A66AAD782EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A04667D-1185-4F42-B41D-C2E35C5BC3DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A04667D-1185-4F42-B41D-C2E35C5BC3DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A04667D-1185-4F42-B41D-C2E35C5BC3DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A04667D-1185-4F42-B41D-C2E35C5BC3DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84D441C1-F4C7-4ECA-95CB-C5684561CA1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84D441C1-F4C7-4ECA-95CB-C5684561CA1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84D441C1-F4C7-4ECA-95CB-C5684561CA1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84D441C1-F4C7-4ECA-95CB-C5684561CA1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC14FC91-0666-485E-8586-F0A6FF47E891} = {4C8D817E-3096-473F-B691-32E96181B0A3}
+		{5982B97E-C432-46CF-8FA5-A44CF9F66355} = {4C8D817E-3096-473F-B691-32E96181B0A3}
+		{CEC8D73A-BADF-4DA6-84AC-A66AAD782EEF} = {5246AB86-EC83-4DA1-9076-4D2F6CFD7EC2}
+		{6A04667D-1185-4F42-B41D-C2E35C5BC3DD} = {5246AB86-EC83-4DA1-9076-4D2F6CFD7EC2}
+		{84D441C1-F4C7-4ECA-95CB-C5684561CA1F} = {E0FA4F3F-82D4-4C52-830B-8B7EE3660E29}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F8CACAC-3E37-4852-9D3B-F0549923AB7F}
+	EndGlobalSection
+EndGlobal
