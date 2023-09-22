@@ -23,12 +23,11 @@ namespace boyutTaskAppAPI.Persistence.Repositories
             if (!traking)
                 query = query.AsNoTracking();
             return (query);
-
         }
 
         public IQueryable<T> GetWhere(Expression<Func<T, bool>> method, bool traking = true)
         {
-           var query = Table.Where(method);
+            var query = Table.Where(method);
             if (!traking)
                 query = query.AsNoTracking();
             return query;
@@ -42,23 +41,30 @@ namespace boyutTaskAppAPI.Persistence.Repositories
             return await query.FirstOrDefaultAsync(method);
         }
 
-        public async Task<Domain.Entities.User?> GetDbUser(string phoneNumber, bool traking = true)
+        public async Task<Domain.Entities.User?> GetDbUser(string phoneNumber, string? requestEmail,
+            bool traking = true)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(x => x.PhoneNumber == phoneNumber);
+            var user = await _context.Users.FirstOrDefaultAsync(x =>
+                x.PhoneNumber == phoneNumber || x.Email == requestEmail);
             return user;
         }
 
+        public async Task<bool> UserExists(string phoneNumber, string? requestEmail, bool traking = true)
+        {
+            var userExists = await _context.Users.AnyAsync(x =>
+                x.PhoneNumber == phoneNumber || (requestEmail != null && x.Email == requestEmail));
+
+            return userExists;
+        }
 
         public async Task<T> GetByIdAsync(string id, bool traking = true)
-        // => await Table.FirstOrDefaultAsync(data => data.Id == Guid.Parse(id));
-        // => await Table.FindAsync(Guid.Parse(id));
+            // => await Table.FirstOrDefaultAsync(data => data.Id == Guid.Parse(id));
+            // => await Table.FindAsync(Guid.Parse(id));
         {
             var query = Table.AsQueryable();
             if (!traking)
                 query = Table.AsNoTracking();
             return await query.FirstOrDefaultAsync(data => data.Id == Guid.Parse(id));
-
-        } 
+        }
     }
-
 }

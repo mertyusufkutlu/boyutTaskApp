@@ -23,16 +23,19 @@ namespace boyutTaskAppAPI.Applicaton.Extensions
                     .FirstOrDefault(claim => claim.Type == "realm_access")
                     ?.Value;
                 
-                if (realmAccess == null)
-                {
-                    throw new ArgumentException("realm_access claim not found in JWT token");
-                }
+                // if (realmAccess == null)
+                // {
+                //     throw new ArgumentException("realm_access claim not found in JWT token");
+                // }
 
-                var root = JsonSerializer.Deserialize<Root>(realmAccess);
-
-                if (root?.Roles != null)
+                if (realmAccess != null)
                 {
-                    list = root.Roles;
+                    var root = JsonSerializer.Deserialize<Root>(realmAccess);
+
+                    if (root?.Roles != null)
+                    {
+                        list = root.Roles;
+                    }
                 }
 
                 return list;

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3RfTcUwtOEf7y/ubSJq8OkmM4kA545RMsC0vxqgUgNllXR/URWqSmaBFBCc337drdLBCin8c45tW8WVzKXM2zw==",
+  "dgSpecHash": "Ykymygx6kWkyqOsLXPo7TgMdsCi4rAHlbybYuZ4hSwAXgH6rUPqxFyHV1KUuwPasFXWyvIDcsBpt75wLFdClng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mert\\Desktop\\boyutTaskApp\\Core\\boyutTaskApp.Domain\\boyutTaskApp.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Mert\\RiderProjects\\boyutTaskApp\\Core\\boyutTaskApp.Domain\\boyutTaskApp.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

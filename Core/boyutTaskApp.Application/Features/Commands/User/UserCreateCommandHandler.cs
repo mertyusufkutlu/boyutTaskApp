@@ -43,11 +43,8 @@ public class UserCreateCommandHandler : IRequestHandler<UserCreateRequest, bool>
                     var newUser = new Domain.Entities.User()
                     {
                         Id = userId,
-                        UserName = request.UserName,
                         PhoneNumber = request.PhoneNumber,
                         Email = request.Email,
-                        BirthDate = request.BirthDate,
-                        Nationality = request.Nationality
                     };
                     await _userWriteRepository.AddAsync(newUser);
                     await _userWriteRepository.SaveAsync();
@@ -60,7 +57,5 @@ public class UserCreateCommandHandler : IRequestHandler<UserCreateRequest, bool>
         {
             throw new BaseException("Error while creating SSO user");
         }
-
-        return false;
     }
 }

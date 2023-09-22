@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mert\\Desktop\\boyutTaskApp\\Core\\boyutTaskApp.Domain\\boyutTaskApp.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Mert\\RiderProjects\\boyutTaskApp\\Core\\boyutTaskApp.Domain\\boyutTaskApp.Domain.csproj",
       "projectName": "boyutTaskApp.Domain",
-      "projectPath": "C:\\Users\\Mert\\Desktop\\boyutTaskApp\\Core\\boyutTaskApp.Domain\\boyutTaskApp.Domain.csproj",
+      "projectPath": "C:\\Users\\Mert\\RiderProjects\\boyutTaskApp\\Core\\boyutTaskApp.Domain\\boyutTaskApp.Domain.csproj",
       "packagesPath": "C:\\Users\\Mert\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mert\\Desktop\\boyutTaskApp\\Core\\boyutTaskApp.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Mert\\RiderProjects\\boyutTaskApp\\Core\\boyutTaskApp.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

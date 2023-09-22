@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6tEmWxfQy0VHx5SYwLSwKGao7OUnw0ZSA/bcYXiNK12kB1wTreJzBKf14NKFbX9y9tSZsv9q461hQy4HwGySDw==",
+  "dgSpecHash": "uTZJzAiOQt2zcCTS1ynLt3xAinrZOdawixZEnT88htFxmQVmiJhFV5naqjpoDZUP5zVPRk7a7I6bXZA48ZgFwA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mert\\Desktop\\boyutTaskApp\\Infrastructure\\boyutTaskApp.Infrastructure\\boyutTaskApp.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Mert\\RiderProjects\\boyutTaskApp\\Infrastructure\\boyutTaskApp.Infrastructure\\boyutTaskApp.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mert\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\Mert\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

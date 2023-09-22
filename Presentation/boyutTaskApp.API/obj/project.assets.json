@@ -4802,11 +4802,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mert\\Desktop\\boyutTaskApp\\Presentation\\boyutTaskApp.API\\boyutTaskApp.API.csproj",
+      "projectUniqueName": "C:\\Users\\Mert\\RiderProjects\\boyutTaskApp\\Presentation\\boyutTaskApp.API\\boyutTaskApp.API.csproj",
       "projectName": "boyutTaskApp.API",
-      "projectPath": "C:\\Users\\Mert\\Desktop\\boyutTaskApp\\Presentation\\boyutTaskApp.API\\boyutTaskApp.API.csproj",
+      "projectPath": "C:\\Users\\Mert\\RiderProjects\\boyutTaskApp\\Presentation\\boyutTaskApp.API\\boyutTaskApp.API.csproj",
       "packagesPath": "C:\\Users\\Mert\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mert\\Desktop\\boyutTaskApp\\Presentation\\boyutTaskApp.API\\obj\\",
+      "outputPath": "C:\\Users\\Mert\\RiderProjects\\boyutTaskApp\\Presentation\\boyutTaskApp.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4827,11 +4827,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Mert\\Desktop\\boyutTaskApp\\Core\\boyutTaskApp.Application\\boyutTaskApp.Application.csproj": {
-              "projectPath": "C:\\Users\\Mert\\Desktop\\boyutTaskApp\\Core\\boyutTaskApp.Application\\boyutTaskApp.Application.csproj"
+            "C:\\Users\\Mert\\RiderProjects\\boyutTaskApp\\Core\\boyutTaskApp.Application\\boyutTaskApp.Application.csproj": {
+              "projectPath": "C:\\Users\\Mert\\RiderProjects\\boyutTaskApp\\Core\\boyutTaskApp.Application\\boyutTaskApp.Application.csproj"
             },
-            "C:\\Users\\Mert\\Desktop\\boyutTaskApp\\Infrastructure\\boyutTaskApp.Persistence\\boyutTaskApp.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Mert\\Desktop\\boyutTaskApp\\Infrastructure\\boyutTaskApp.Persistence\\boyutTaskApp.Persistence.csproj"
+            "C:\\Users\\Mert\\RiderProjects\\boyutTaskApp\\Infrastructure\\boyutTaskApp.Persistence\\boyutTaskApp.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Mert\\RiderProjects\\boyutTaskApp\\Infrastructure\\boyutTaskApp.Persistence\\boyutTaskApp.Persistence.csproj"
             }
           }
         }

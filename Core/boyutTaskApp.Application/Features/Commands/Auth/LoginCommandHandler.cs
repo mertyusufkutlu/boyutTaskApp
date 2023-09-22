@@ -20,7 +20,7 @@ public class LoginCommandHandler : IRequestHandler<LoginRequest, LoginResponse>
     {
         try
         {
-            var user = await _userReadRepository.GetDbUser(request.PhoneNumber);
+            var user = await _userReadRepository.GetDbUser(request.PhoneNumber, request.Email);
             if (user == null)
             {
                 throw new BaseException("User not found", 401);

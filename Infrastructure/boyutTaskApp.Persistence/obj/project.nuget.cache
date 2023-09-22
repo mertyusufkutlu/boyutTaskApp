@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O2m+/Q+jg1tvuH4cr5FpgnrDJ4lXiN4iWNODVVJO2cu04baTw+PTY+buiHBXY4qbi6xxg+IkI74z0n1z3H1B7g==",
+  "dgSpecHash": "PupMesagevR04tZy9SoDeIZf/1T4+E/pJZ8O7fl9ukqlH5TGIHqJjIPx2vI+JPDi+8Ou3fxJZOvyw4iujF27Cw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mert\\Desktop\\boyutTaskApp\\Infrastructure\\boyutTaskApp.Persistence\\boyutTaskApp.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\Mert\\RiderProjects\\boyutTaskApp\\Infrastructure\\boyutTaskApp.Persistence\\boyutTaskApp.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mert\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Mert\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",

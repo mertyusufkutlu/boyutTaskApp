@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = boyutTaskAppAPI.Infrastructure
-build_property.ProjectDir = C:\Users\Mert\Desktop\boyutTaskApp\Infrastructure\boyutTaskApp.Infrastructure\
+build_property.ProjectDir = C:\Users\Mert\RiderProjects\boyutTaskApp\Infrastructure\boyutTaskApp.Infrastructure\

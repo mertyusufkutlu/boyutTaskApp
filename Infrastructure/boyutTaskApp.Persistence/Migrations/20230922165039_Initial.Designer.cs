@@ -12,7 +12,7 @@ using boyutTaskAppAPI.Persistence.Contexts;
 namespace boyutTaskAppAPI.Persistence.Migrations
 {
     [DbContext(typeof(boyutTaskAppDbContext))]
-    [Migration("20230907203856_Initial")]
+    [Migration("20230922165039_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,14 +24,11 @@ namespace boyutTaskAppAPI.Persistence.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("boyutTaskAppAPI.Domain.Entites.User", b =>
+            modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
-
-                    b.Property<DateTime?>("BirthDate")
-                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Email")
                         .HasMaxLength(250)
@@ -43,32 +40,13 @@ namespace boyutTaskAppAPI.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
-                    b.Property<string>("NationalId")
-                        .HasMaxLength(250)
-                        .HasColumnType("character varying(250)");
-
-                    b.Property<string>("Nationality")
-                        .HasMaxLength(3)
-                        .HasColumnType("character varying(3)");
-
-                    b.Property<string>("PassportId")
-                        .HasMaxLength(250)
-                        .HasColumnType("character varying(250)");
-
                     b.Property<string>("PhoneNumber")
                         .HasMaxLength(64)
                         .HasColumnType("character varying(64)");
 
-                    b.Property<string>("PhotoUrl")
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(250)
-                        .HasColumnType("character varying(250)");
-
                     b.HasKey("Id");
 
-                    b.ToTable("User", "sg_be");
+                    b.ToTable("User", "boyut_be");
                 });
 #pragma warning restore 612, 618
         }
