@@ -4,7 +4,7 @@ using boyutTaskAppAPI.Domain.Entities.Common;
 
 namespace boyutTaskAppAPI.Domain.Entities;
 
-[Table(nameof(User), Schema = "sg_be")]
+[Table(nameof(User), Schema = "boyut_be")]
 public class User : BaseEntity
 {
 
@@ -13,4 +13,6 @@ public class User : BaseEntity
 
     [MaxLength(64)]
     public string? PhoneNumber { get; set; }
+
+    public ICollection<Basket> Baskets { get; set; }
 }

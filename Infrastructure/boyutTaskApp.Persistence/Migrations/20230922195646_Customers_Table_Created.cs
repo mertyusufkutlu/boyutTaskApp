@@ -98,7 +98,7 @@ namespace boyutTaskAppAPI.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CustomerBasket",
+                name: "Basket",
                 schema: "boyut_be",
                 columns: table => new
                 {
@@ -157,13 +157,13 @@ namespace boyutTaskAppAPI.Persistence.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_CustomerBasket_ProductId",
                 schema: "boyut_be",
-                table: "CustomerBasket",
+                table: "Basket",
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CustomerBasket_UserId",
                 schema: "boyut_be",
-                table: "CustomerBasket",
+                table: "Basket",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
@@ -188,7 +188,7 @@ namespace boyutTaskAppAPI.Persistence.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CustomerBasket",
+                name: "Basket",
                 schema: "boyut_be");
 
             migrationBuilder.DropTable(

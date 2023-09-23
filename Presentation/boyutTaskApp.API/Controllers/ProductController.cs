@@ -49,10 +49,10 @@ public class ProductController : ControllerBase
         return Ok(new BaseResponse<CreateProductGroupResponse>(response));
     }
     
-    // [HttpDelete("{id}")]
-    // public async Task<IActionResult> Delete(string id)
-    // {
-    //     var response =  await _mediator.Send(new DeleteProductCommand{ Id = id});
-    //     return Ok();
-    // }
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(string id)
+    {
+        var response =  await _mediator.Send(new DeleteProductCommand{ Id = id});
+        return Ok(response);
+    }
 }

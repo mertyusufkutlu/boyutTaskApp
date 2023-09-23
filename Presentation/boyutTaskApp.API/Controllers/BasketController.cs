@@ -1,5 +1,4 @@
 ﻿using boyutTaskAppAPI.Applicaton.Base.GenericAuth;
-using boyutTaskAppAPI.Applicaton.Repositories.CustomerBasket;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,17 +8,13 @@ namespace boyutTaskAppAPI.API.Controllers;
 [ApiController]
 [GenericAuthorize("Login")]
 
-public class CustomerBasketController : ControllerBase
+public class BasketController : ControllerBase
 {
-    private readonly ICustomerBasketReadRepository _customerBasketReadRepository;
-    private readonly ICustomerBasketWriteRepository _customerBasketWriteRepository;
-    readonly private IMediator _mediator;
+    
+    private readonly IMediator _mediator;
 
-    public CustomerBasketController(ICustomerBasketReadRepository customerBasketReadRepository,
-        ICustomerBasketWriteRepository customerBasketWriteRepository, IMediator mediator)
+    public BasketController(IMediator mediator)
     {
-        _customerBasketReadRepository = customerBasketReadRepository;
-        _customerBasketWriteRepository = customerBasketWriteRepository;
         _mediator = mediator;
     }
     // [HttpGet("{userId}")]
@@ -30,8 +25,12 @@ public class CustomerBasketController : ControllerBase
     // }
     
     // [HttpPost]
-    // public async Task<IActionResult> Post(VM_CustomerBasket model)
+    // public async Task<IActionResult> Post(CustomerBasketRequest customerBasketRequest)
     // {
+    //     
+    //     var response =  await _mediator.Send(customerBasketRequest);
+    //     return Ok(new BaseResponse<CreateBasketResponse>(response));
+    //     
     //     await _customerBasketWriteRepository.AddAsync(new()
     //     {
     //         ProductId = model.ProductId,

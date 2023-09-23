@@ -1,6 +1,6 @@
 ﻿// using boyutTaskAppAPI.Domain.Entites;
 //
-// namespace boyutTaskAppAPI.Applicaton.Features.Queries.CustomerBasket;
+// namespace boyutTaskAppAPI.Applicaton.Features.Queries.Basket;
 //
 // public class GetCustomerBasketByIdResponse
 // {

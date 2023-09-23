@@ -3,9 +3,9 @@
 // using MediatR;
 // using Microsoft.EntityFrameworkCore;
 //
-// namespace boyutTaskAppAPI.Applicaton.Features.Queries.CustomerBasket;
+// namespace boyutTaskAppAPI.Applicaton.Features.Queries.Basket;
 //
-// public class GetCustomerBasketByIdHandler : IRequestHandler<GetCustomerBasketByIdQueryRequest, List<Domain.Entites.CustomerBasket>>
+// public class GetCustomerBasketByIdHandler : IRequestHandler<GetCustomerBasketByIdQueryRequest, List<Domain.Entites.Basket>>
 // {
 //     readonly private ICustomerBasketReadRepository _customerBasketReadRepository;
 //     
@@ -15,7 +15,7 @@
 //         _customerBasketReadRepository = customerBasketReadRepository;
 //     }
 //
-//     public async Task<List<Domain.Entites.CustomerBasket>> Handle(GetCustomerBasketByIdQueryRequest request, CancellationToken cancellationToken)
+//     public async Task<List<Domain.Entites.Basket>> Handle(GetCustomerBasketByIdQueryRequest request, CancellationToken cancellationToken)
 //     {
 //         var items = await _customerBasketReadRepository.GetAll().Where(x=>x.UserId == request.UserId).ToListAsync(cancellationToken);
 //         return items;

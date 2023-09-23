@@ -22,6 +22,58 @@ namespace boyutTaskAppAPI.Persistence.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.Basket", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("ExternalId")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Basket", "boyut_be");
+                });
+
+            modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.BasketItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("BasketId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("ExternalId")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid?>("ProductId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BasketId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("BasketItem", "boyut_be");
+                });
+
             modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.Customer", b =>
                 {
                     b.Property<Guid>("Id")
@@ -41,33 +93,6 @@ namespace boyutTaskAppAPI.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Customer", "boyut_be");
-                });
-
-            modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.CustomerBasket", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("ExternalId")
-                        .HasColumnType("text");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("boolean");
-
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("CustomerBasket", "boyut_be");
                 });
 
             modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.Order", b =>
@@ -175,7 +200,7 @@ namespace boyutTaskAppAPI.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("User", "sg_be");
+                    b.ToTable("User", "boyut_be");
                 });
 
             modelBuilder.Entity("OrderProduct", b =>
@@ -193,23 +218,30 @@ namespace boyutTaskAppAPI.Persistence.Migrations
                     b.ToTable("OrderProduct", "boyut_be");
                 });
 
-            modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.CustomerBasket", b =>
+            modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.Basket", b =>
                 {
-                    b.HasOne("boyutTaskAppAPI.Domain.Entities.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("boyutTaskAppAPI.Domain.Entities.User", "User")
-                        .WithMany()
+                        .WithMany("Baskets")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Product");
-
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.BasketItem", b =>
+                {
+                    b.HasOne("boyutTaskAppAPI.Domain.Entities.Basket", "Basket")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("BasketId");
+
+                    b.HasOne("boyutTaskAppAPI.Domain.Entities.Product", "Product")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("ProductId");
+
+                    b.Navigation("Basket");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.Order", b =>
@@ -247,9 +279,24 @@ namespace boyutTaskAppAPI.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.Basket", b =>
+                {
+                    b.Navigation("BasketItems");
+                });
+
             modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.Customer", b =>
                 {
                     b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.Product", b =>
+                {
+                    b.Navigation("BasketItems");
+                });
+
+            modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.User", b =>
+                {
+                    b.Navigation("Baskets");
                 });
 #pragma warning restore 612, 618
         }
