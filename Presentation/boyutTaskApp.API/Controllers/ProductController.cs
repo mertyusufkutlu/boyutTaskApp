@@ -20,7 +20,7 @@ public class ProductController : ControllerBase
         _mediator = mediator;
     }
     
-    [HttpGet("get-all")]
+    [HttpGet("list-all")]
     public async Task<IActionResult> GetAll()
     {
         var response =  await _mediator.Send(new GetAllProductQueryRequest());
@@ -46,6 +46,6 @@ public class ProductController : ControllerBase
     public async Task<IActionResult> Delete(string id)
     {
         var response =  await _mediator.Send(new DeleteProductCommand{ Id = id});
-        return Ok(response);
+        return Ok(new BaseResponse<bool>(response));
     }
 }

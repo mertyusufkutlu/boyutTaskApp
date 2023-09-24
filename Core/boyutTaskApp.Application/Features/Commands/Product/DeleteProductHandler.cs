@@ -3,7 +3,7 @@ using MediatR;
 
 namespace boyutTaskAppAPI.Applicaton.Features.Commands.Product;
 
-public class DeleteProductHandler : IRequestHandler<DeleteProductCommand, List<Domain.Entities.Product>>
+public class DeleteProductHandler : IRequestHandler<DeleteProductCommand, bool>
 {
     private readonly IProductWriteRepository _productWriteRepository;
 
@@ -12,10 +12,10 @@ public class DeleteProductHandler : IRequestHandler<DeleteProductCommand, List<D
         _productWriteRepository = productWriteRepository;
     }
 
-    public async Task<List<Domain.Entities.Product>> Handle(DeleteProductCommand request, CancellationToken cancellationToken)
+    public async Task<bool> Handle(DeleteProductCommand request, CancellationToken cancellationToken)
     {
         var items = await _productWriteRepository.RemoveAsync(request.Id);
         await _productWriteRepository.SaveAsync();
-        return new();
+        return true;
     }
 }

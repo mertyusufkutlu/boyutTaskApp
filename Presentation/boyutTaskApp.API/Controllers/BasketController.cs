@@ -19,21 +19,21 @@ public class BasketController : ControllerBase
         _mediator = mediator;
     }
 
-    [HttpGet]
+    [HttpGet("user-basket-items")]
     public async Task<IActionResult> GetBasketItems([FromQuery] GetBasketItemsQueryRequest getBasketItemsQuery)
     {
         var response = await _mediator.Send(getBasketItemsQuery);
         return Ok(response);
     }
 
-    [HttpPost]
+    [HttpPost("add-basket-item")]
     public async Task<IActionResult> AddBasketItems(CreateBasketItemRequest createBasketItemRequest)
     {
         var response = await _mediator.Send(createBasketItemRequest);
         return Ok(new BaseResponse<CreateBasketItemResponse>(response));
     }
 
-    [HttpPut]
+    [HttpPut("update-basket-item-quantity")]
     public async Task<IActionResult> UpdateBasketItemQuantity(UpdateBasketItemRequest updateBasketItemRequest)
     {
         var response = await _mediator.Send(updateBasketItemRequest);
@@ -41,7 +41,7 @@ public class BasketController : ControllerBase
     }
 
     //TODO: FromQuery for just backend need to be FromRoute
-    [HttpDelete]
+    [HttpDelete("delete-basket-item")]
     public async Task<IActionResult> DeleteBasketItems(
         [FromQuery] RemoveBasketItemCommandRequest removeBasketItemCommandRequest)
     {
