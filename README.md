@@ -4,27 +4,21 @@
 
 - #### Kullanılan Design Patterler :  Onion Architecture, CQRS, Repository Pattern
 
-
 - Proje çalışmadan önce local veritabanına (PostgreSQL) `postgres` adında bir veritabanı oluşturmak veya connectionstring'i kendinize göre düzenlemeniz gerekir.
 
 - Proje codefirst olup İlk açılışta connection sağlandıktan sonra update-database yapmak yeterli olacaktır.
 
-
 - Sonrasında KeyCloak,REDIS ve PostgtreSQL için Docker Desktop'da ayağa kalıdırıp kurulumları yapılmalıdır.
-
 
 - InstallationDocument adlı dosyada step step nasıl kurulum yapılması gerektiği açıklanmaktadır.
 
-
 ***Verilen task için tüm API'lerin açıklaması aşağıda mevcuttur*** :
-
-
-# ![#1589F0]Kullanıcı API'leri
 
 ## Yeni kullanıcı oluşturma
 ```http
   POST /api/User/create
 ```
+
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `phoneNumber` | `string` | Yeni kayıt için numarası |
@@ -33,23 +27,19 @@
 #### Açıklama
 - Bu API yeni kullanıcı oluşturmak içindir ilk başta DB'de bir kayıt oluşturur sonrasında ise KeyCloak tarafında karşılığını oluşturarak eşleştirilir.
 
-<br>
-<br>
-<br>
-
-![#1589F0]Auth API'leri
 
 ## SMS Gönderme
 ```http
   POST /api/Auth/send-sms
 ```
+
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `phoneNumber` | `string` | Yeni kayıt için numarası |
 | `countryCode` | `string` | Yeni kullanıcı ülke kodu ALPHA3 ====> TUR,GER,JPN vs.. |
+
 #### Açıklama
 - Bu API isteğe bağlı olarak senaryoya dahil edilebilir SMS doğrulama için konulmuştur.
-
 
 
 ## SMS Kodunu Doğrulama
@@ -57,6 +47,7 @@
 ```http
   POST /api/Auth/verify-sms-code
 ```
+
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `phoneNumber` | `string` | Kullanıcı telefon numarası |
@@ -66,11 +57,11 @@
 - /api/Auth/send-sms API'sinden gelen doğrulama kodu burada verify edilir.
 
 
-
 ## Token Oluşturma
 ```http
   POST /api/Auth/create-token
 ```
+
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `userId` | `uuid` | Kullanıcı ID'si Guid |
@@ -81,11 +72,11 @@
 - KeyCloak üzerinden JWT Token üretmeye yarayan API'dir.
 
 
-
 ## Keycloak Erişim Token Alma
 ```http
   POST /api/Auth/keycloak-access-token
 ```
+
 #### Açıklama
 - Herhangi bir paratmere olmadan {} boş body şeklinde yollanır KeyCloak için master-user üzerinden token alıp REDIS'e key-value olarak yazar. Authorize gerekir.
 
@@ -94,6 +85,7 @@
 ```http
   POST /api/Auth/login
 ```
+
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `phoneNumber` | `string?` | Ürün Adı |
@@ -103,17 +95,13 @@
 #### Açıklama
 - Oturum açma API'sidir kişi phoneNumber veya email'den sadece birini girmesi yeterli olacaktır. İstenirse daha fazla eklenebilir userName,TcKimlik vs..
 - Oturum açma işleminden sonra geri kalan tüm API'lere Authorize olmak gerekir yoksa 401 Unauthorized hatası dönecektir.
-<br>
-<br>
-<br>
 
-
-# ![#1589F0]Sepet API'leri
 
 ## Kullanıcının Sepet Öğelerini Listeleme
 ```http
   GET /api/Basket/user-basket-items
 ```
+
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `userId` | `uuid` | Kullanıcı Id değeri Guid |
@@ -121,11 +109,11 @@
 #### Açıklama
 - Kullanıcı bazlı sepet öğelerini listeleme için kullanılan API.
 
-
 ## Kullanıcıya Sepet Öğesi Ekleme
 ```http
   POST /api/Basket/add-basket-item
 ```
+
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `userId` | `uuid` | Kullanıcı Id değeri Guid |
@@ -136,11 +124,11 @@
 - Kullanıcı bazlı sepet'e ürün eklemek için kullanılan API.
 
 
-
 ## Sepet ürün miktarı güncelleme
 ```http
   PUT /api/Basket/update-basket-item-quantity
 ```
+
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `basketItemId` | `uuid` | basket'e eklenmiş ürün Id'si Guid |
@@ -153,17 +141,14 @@
 ```http
   DELETE /api/Basket/delete-basket-item
 ```
+
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `basketItemId` | `uuid` | basket'e eklenmiş ürün Id'si Guid |
 
 #### Açıklama
 - basketItemId paramtersine göre kişinin sepetinden ürün siler.
-<br>
-<br>
-<br>
 
-# ![#1589F0]Ürün API'leri
 
 ## Ürünleri Listeleme
 ```http
@@ -178,6 +163,7 @@
 ```http
   POST /api/Product/create
 ```
+
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `name` | `string` | Ürün Adı |
@@ -193,6 +179,7 @@
 ```http
   POST api/ProductGroup
 ```
+
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `name` | `string` | Ürünün Eşleşeceği Ürün Kategorisinin Adı |
@@ -204,6 +191,7 @@
 ```http
   DELETE /api/Product/{id}
 ```
+
 | Parametre | Tip     | Açıklama                |
 | :-------- | :------- | :------------------------- |
 | `id` | `uuid` | ÜrünId'si Guid |
