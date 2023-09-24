@@ -33,7 +33,9 @@
 #### Açıklama
 - Bu API yeni kullanıcı oluşturmak içindir ilk başta DB'de bir kayıt oluşturur sonrasında ise KeyCloak tarafında karşılığını oluşturarak eşleştirilir.
 
-
+<br>
+<br>
+<br>
 # Auth API'leri
 
 ## SMS Gönderme
@@ -100,9 +102,9 @@
 #### Açıklama
 - Oturum açma API'sidir kişi phoneNumber veya email'den sadece birini girmesi yeterli olacaktır. İstenirse daha fazla eklenebilir userName,TcKimlik vs..
 - Oturum açma işleminden sonra geri kalan tüm API'lere Authorize olmak gerekir yoksa 401 Unauthorized hatası dönecektir.
-
-
-
+<br>
+<br>
+<br>
 # Sepet API'leri
 
 ## Kullanıcının Sepet Öğelerini Listeleme
@@ -154,7 +156,9 @@
 
 #### Açıklama
 - basketItemId paramtersine göre kişinin sepetinden ürün siler.
-
+<br>
+<br>
+<br>
 
 # Ürün API'leri
 
