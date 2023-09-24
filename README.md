@@ -10,7 +10,7 @@
 
 - Sonrasında KeyCloak,REDIS ve PostgtreSQL için Docker Desktop'da ayağa kalıdırıp kurulumları yapılmalıdır.
 
-- InstallationDocument adlı dosyanın altında READE.md içeriisnde step step nasıl kurulum yapılması gerektiği açıklanmaktadır.
+- InstallationDocument adlı dosyanın altında DocReadMe.md içeriisnde step step nasıl kurulum yapılması gerektiği açıklanmaktadır.
 
 ***Verilen task için tüm API'lerin açıklaması aşağıda mevcuttur*** :
 
