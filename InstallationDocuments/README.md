@@ -1,6 +1,6 @@
-# Boyut Bilgisayar Mülakat Proje Dokümanı
+# Gerekli Tool'lar için kurulum Kurulum Klavuzu
 
-- #### KeyCloak Docker Desktop Kurulum Klavuzu
+- #### KeyCloak Docker Desktop Kurulum
 
 - docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:22.0.3 start-dev
 
@@ -21,13 +21,13 @@
 - Step6 göreslindeki gibi projenin içinden appsettings.json daki "ClientSecretBodyValue": "" içeriğine kopyalanan Client secret KEY yazılır.
 
 
-- #### REDIS Docker Desktop Kurulum Klavuzu
+- #### REDIS Docker Desktop Kurulum
 
 - docker run --name redis  -p 6379:6379  -d redis redis-server
 
 - Yukarıdaki kodu çalıştırmak yeterli olacaktır. Dcoker Desktop'da image oluşacaktır.
   
-- #### PostgreSQL Docker Desktop Kurulum  Klavuzu
+- #### PostgreSQL Docker Desktop Kurulum
 
 - docker run -e POSTGRES_PASSWORD="Numlock1234!!" -p 5432:5432 --name local-postgres postgres
 
