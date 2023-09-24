@@ -34,6 +34,9 @@ namespace boyutTaskAppAPI.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 
@@ -252,6 +255,14 @@ namespace boyutTaskAppAPI.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("boyutTaskAppAPI.Domain.Entities.Basket", "Basket")
+                        .WithOne("Order")
+                        .HasForeignKey("boyutTaskAppAPI.Domain.Entities.Order", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+
                     b.Navigation("Customer");
                 });
 
@@ -282,6 +293,9 @@ namespace boyutTaskAppAPI.Persistence.Migrations
             modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.Basket", b =>
                 {
                     b.Navigation("BasketItems");
+
+                    b.Navigation("Order")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.Customer", b =>

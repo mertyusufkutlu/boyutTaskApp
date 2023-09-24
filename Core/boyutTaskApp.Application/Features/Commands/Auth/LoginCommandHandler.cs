@@ -2,6 +2,7 @@
 using boyutTaskAppAPI.Applicaton.Base;
 using boyutTaskAppAPI.Applicaton.Features.Commands.KeyCloak;
 using boyutTaskAppAPI.Applicaton.Repositories;
+using boyutTaskAppAPI.Applicaton.Repositories.User;
 
 namespace boyutTaskAppAPI.Applicaton.Features.Commands.Auth;
 

@@ -1,4 +1,5 @@
 ﻿using boyutTaskAppAPI.Applicaton.Repositories;
+using boyutTaskAppAPI.Applicaton.Repositories.User;
 using boyutTaskAppAPI.Persistence.Contexts;
 
 namespace boyutTaskAppAPI.Persistence.Repositories.User

@@ -5,7 +5,7 @@ namespace boyutTaskAppAPI.Persistence.Repositories.BasketItem;
 
 public class BasketItemReadRepository : ReadRepository<Domain.Entities.BasketItem> , IBasketItemReadRepository
 {
-    protected BasketItemReadRepository(boyutTaskAppDbContext context) : base(context)
+    public BasketItemReadRepository(boyutTaskAppDbContext context) : base(context)
     {
     }
 }

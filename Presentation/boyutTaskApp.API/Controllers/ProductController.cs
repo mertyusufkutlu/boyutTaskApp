@@ -1,10 +1,8 @@
-﻿using System.Net;
-using boyutTaskAppAPI.Applicaton.Base;
+﻿using boyutTaskAppAPI.Applicaton.Base;
 using boyutTaskAppAPI.Applicaton.Base.GenericAuth;
 using boyutTaskAppAPI.Applicaton.Features.Commands.Product;
 using boyutTaskAppAPI.Applicaton.Features.Commands.ProductGroup;
 using boyutTaskAppAPI.Applicaton.Features.Queries.Product;
-using boyutTaskAppAPI.Applicaton.Repositories.Product;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,15 +13,10 @@ namespace boyutTaskAppAPI.API.Controllers;
 [GenericAuthorize("Login")]
 public class ProductController : ControllerBase
 {
-    private readonly IProductWriteRepository _productWriteRepository;
-    private readonly IProductReadRepository _productReadRepository;
-        
     private readonly IMediator _mediator;
 
-    public ProductController(IProductWriteRepository productWriteRepository, IProductReadRepository productReadRepository, IMediator mediator)
+    public ProductController(IMediator mediator)
     {
-        _productWriteRepository = productWriteRepository;
-        _productReadRepository = productReadRepository;
         _mediator = mediator;
     }
     

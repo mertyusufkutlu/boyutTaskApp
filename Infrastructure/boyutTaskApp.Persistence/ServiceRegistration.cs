@@ -8,6 +8,8 @@ using boyutTaskAppAPI.Applicaton.Repositories.Customer;
 using boyutTaskAppAPI.Applicaton.Repositories.Order;
 using boyutTaskAppAPI.Applicaton.Repositories.Product;
 using boyutTaskAppAPI.Applicaton.Repositories.ProductGroup;
+using boyutTaskAppAPI.Applicaton.Repositories.User;
+using boyutTaskAppAPI.Applicaton.Services;
 using boyutTaskAppAPI.Applicaton.Settings;
 using boyutTaskAppAPI.Persistence.Repositories.Basket;
 using boyutTaskAppAPI.Persistence.Repositories.BasketItem;
@@ -16,6 +18,7 @@ using boyutTaskAppAPI.Persistence.Repositories.Order;
 using boyutTaskAppAPI.Persistence.Repositories.Product;
 using boyutTaskAppAPI.Persistence.Repositories.ProductGroup;
 using boyutTaskAppAPI.Persistence.Repositories.User;
+using boyutTaskAppAPI.Persistence.Services;
 
 namespace boyutTaskAppAPI.Persistence
 {
@@ -41,8 +44,10 @@ namespace boyutTaskAppAPI.Persistence
             services.AddScoped<IBasketItemReadRepository, BasketItemReadRepository>();
             services.AddScoped<IBasketItemWriteRepository, BasketItemWriteRepository>();
             
+            services.AddScoped<IBasketService,BasketService>();
+            
             services.AddScoped<IBasketWriteRepository, BasketWriteRepository>();
-            services.AddScoped<IBasketWriteRepository, BasketWriteRepository>();
+            services.AddScoped<IBasketReadRepository, BasketReadRepository>();
         }
     }
 }

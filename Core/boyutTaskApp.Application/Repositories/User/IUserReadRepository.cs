@@ -1,8 +1,6 @@
-﻿using boyutTaskAppAPI.Domain.Entities;
-
-namespace boyutTaskAppAPI.Applicaton.Repositories
+﻿namespace boyutTaskAppAPI.Applicaton.Repositories.User
 {
-    public interface IUserReadRepository : IReadRepository<User>
+    public interface IUserReadRepository : IReadRepository<Domain.Entities.User>
     {
     }
 }

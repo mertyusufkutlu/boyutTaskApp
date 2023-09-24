@@ -16,7 +16,7 @@ namespace boyutTaskAppAPI.Applicaton.Repositories
 
         Task<T> GetSingleAsync(Expression<Func<T, bool>> method, bool traking = true);
         
-        Task<User?> GetDbUser(string phoneNumber, string? requestEmail, bool traking = true);
+        Task<Domain.Entities.User?> GetDbUser(string phoneNumber, string? requestEmail, bool traking = true);
         
         Task<bool> UserExists(string phoneNumber, string? requestEmail, bool traking = true);
         Task<T> GetByIdAsync(string id, bool traking = true);
