@@ -1,4 +1,4 @@
-# Guven Future Mülakat Proje Dokümanı
+# Boyut Bilgisayar Mülakat Proje Dokümanı
 
 - #### Kullanılan kütüphaneler :  AutoMapper, Newtonsoft.Json, EntityFrameworkCore, DependencyInjection, JwtBearer, MediatR, KeyCloak, REDIS
 
@@ -19,7 +19,7 @@
 ***Verilen task için tüm API'lerin açıklaması aşağıda mevcuttur*** :
 
 
-# Kullanıcı API'leri
+# ![#1589F0]Kullanıcı API'leri
 
 ## Yeni kullanıcı oluşturma
 ```http
@@ -37,7 +37,7 @@
 <br>
 <br>
 
-# Auth API'leri
+# ![#1589F0]Auth API'leri
 
 ## SMS Gönderme
 ```http
@@ -108,7 +108,7 @@
 <br>
 
 
-# Sepet API'leri
+# ![#1589F0]Sepet API'leri
 
 ## Kullanıcının Sepet Öğelerini Listeleme
 ```http
@@ -163,7 +163,7 @@
 <br>
 <br>
 
-# Ürün API'leri
+# ![#1589F0]Ürün API'leri
 
 ## Ürünleri Listeleme
 ```http
