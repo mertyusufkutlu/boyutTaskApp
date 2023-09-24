@@ -37,7 +37,7 @@
 <br>
 <br>
 
-# ![#1589F0]Auth API'leri
+![#1589F0]Auth API'leri
 
 ## SMS Gönderme
 ```http
