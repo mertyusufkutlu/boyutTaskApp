@@ -1,4 +1,5 @@
-﻿using boyutTaskAppAPI.Applicaton.Features.Commands.Order;
+﻿using boyutTaskAppAPI.Applicaton.Base;
+using boyutTaskAppAPI.Applicaton.Features.Commands.Order;
 using boyutTaskAppAPI.Applicaton.Repositories.Order;
 using boyutTaskAppAPI.Applicaton.Services;
 using boyutTaskAppAPI.Domain.Entities;
@@ -40,9 +41,13 @@ public class OrderService : IOrderService
         {
             // İlgili ürünün miktarını güncelle
             var product = await _boyutTaskAppDbContext.Products.FindAsync(basketItem.ProductId);
-            if (product != null)
+            if (product != null && product.Stock != 0)
             {
                 product.Stock -= basketItem.Quantity;
+            }
+            else
+            {
+                throw new BaseException("Stock quantity cannot be less than 0");
             }
         }
 
