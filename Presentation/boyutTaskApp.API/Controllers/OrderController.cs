@@ -19,7 +19,7 @@ public class OrderController : ControllerBase
         _mediator = mediator;
     }
 
-    [GenericAuthorize("Admin")]
+    [GenericAuthorize("User")]
     [HttpPost("create")]
     public async Task<IActionResult> Post(CreateOrderCommandRequest createProductRequest)
     {
