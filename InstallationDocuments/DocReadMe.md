@@ -56,7 +56,7 @@
 
 - docker run --name redis  -p 6379:6379  -d redis redis-server
 
-- Yukarıdaki kodu çalıştırmak yeterli olacaktır. Dcoker Desktop'da image oluşacaktır.
+- Yukarıdaki kodu çalıştırmak yeterli olacaktır. Docker Desktop'da image oluşacaktır.
 
 - #### PostgreSQL Docker Desktop Kurulum  Klavuzu
 
