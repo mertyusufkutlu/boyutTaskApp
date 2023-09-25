@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using boyutTaskAppAPI.Persistence.Contexts;
@@ -11,9 +12,10 @@ using boyutTaskAppAPI.Persistence.Contexts;
 namespace boyutTaskAppAPI.Persistence.Migrations
 {
     [DbContext(typeof(boyutTaskAppDbContext))]
-    partial class boyutTaskAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230925191953_Order_Table_Last_Revised")]
+    partial class Order_Table_Last_Revised
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using boyutTaskAppAPI.Persistence.Contexts;
@@ -11,9 +12,10 @@ using boyutTaskAppAPI.Persistence.Contexts;
 namespace boyutTaskAppAPI.Persistence.Migrations
 {
     [DbContext(typeof(boyutTaskAppDbContext))]
-    partial class boyutTaskAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230925184500_Product_Table_Revised")]
+    partial class Product_Table_Revised
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -108,6 +110,9 @@ namespace boyutTaskAppAPI.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<Guid?>("CustomerId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
@@ -119,6 +124,8 @@ namespace boyutTaskAppAPI.Persistence.Migrations
                         .HasColumnType("boolean");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
 
                     b.ToTable("Order", "boyut_be");
                 });
@@ -229,6 +236,10 @@ namespace boyutTaskAppAPI.Persistence.Migrations
 
             modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.Order", b =>
                 {
+                    b.HasOne("boyutTaskAppAPI.Domain.Entities.Customer", null)
+                        .WithMany("Orders")
+                        .HasForeignKey("CustomerId");
+
                     b.HasOne("boyutTaskAppAPI.Domain.Entities.Basket", "Basket")
                         .WithOne("Order")
                         .HasForeignKey("boyutTaskAppAPI.Domain.Entities.Order", "Id")
@@ -253,6 +264,11 @@ namespace boyutTaskAppAPI.Persistence.Migrations
 
                     b.Navigation("Order")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.Customer", b =>
+                {
+                    b.Navigation("Orders");
                 });
 
             modelBuilder.Entity("boyutTaskAppAPI.Domain.Entities.Product", b =>

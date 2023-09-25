@@ -48,6 +48,8 @@ namespace boyutTaskAppAPI.Persistence
             
             services.AddScoped<IBasketWriteRepository, BasketWriteRepository>();
             services.AddScoped<IBasketReadRepository, BasketReadRepository>();
+            
+            services.AddScoped<IOrderService, OrderService>();
         }
     }
 }

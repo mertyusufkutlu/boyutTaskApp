@@ -17,5 +17,5 @@ public class Product : BaseEntity
 
     public ICollection<BasketItem> BasketItems { get; set; }
 
-    public ICollection<Order>? Orders { get; set; }
+    // public ICollection<Order>? Orders { get; set; }
 }
