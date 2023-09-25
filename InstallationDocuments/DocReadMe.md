@@ -1,6 +1,6 @@
 # Boyut Bilgisayar Mülakat Proje Dokümanı
 
-- #### KeyCloak Docker Desktop Kurulum Klavuzu
+- #### ** KeyCloak Docker Desktop Kurulum Klavuzu ** 
 
 - Step1) Bu kodu cmd de yönetici olarak çalıştırıyoruz docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:22.0.3 start-dev
 
@@ -50,15 +50,21 @@
 
 - Step24 SONSTEP) Step10'dan kopayalanan client secret değeri resimdeki gibi appsettings.json içeriinse yazılır ve doğruluğu kontrol edilir.
 
-**Geri kalan ayarlar aynı olduğu için KeyCloak kurulumumuz hazır artık /api/User/create API'sine istek atılıp yeni kullanıcı oluşturulabilir.
+**Geri kalan ayarlar aynı olduğu için KeyCloak kurulumumuz hazır artık /api/User/create API'sine istek atılıp yeni kullanıcı oluşturulabilir fakat roller ayarlanması gerekir.
 
-- #### REDIS Docker Desktop Kurulum Klavuzu
+- #### ** KeyCloak Auth Role Kısımı **
+
+- User,Admin rollerini ayırmak için keycloak REST API'si mevcut fakat hızlı olması adına entegre etmedim. Admin UI'dan(localhost:8080) Step25'deki görselden istenilen rol verilebilir.
+
+- Login rolü must yani default olmalı ayrıca User,Admin rolleri verilebilir Step26'daki gibi controllerlara [GenericAuthorize("Admin")] veya [GenericAuthorize("User")] şeklinde eklenmelidir
+
+- #### ** REDIS Docker Desktop Kurulum Klavuzu **
 
 - docker run --name redis  -p 6379:6379  -d redis redis-server
 
 - Yukarıdaki kodu çalıştırmak yeterli olacaktır. Docker Desktop'da image oluşacaktır.
 
-- #### PostgreSQL Docker Desktop Kurulum  Klavuzu
+- #### ** PostgreSQL Docker Desktop Kurulum  Klavuzu **
 
 - docker run -e POSTGRES_PASSWORD="Numlock1234!!" -p 5432:5432 --name local-postgres postgres
 

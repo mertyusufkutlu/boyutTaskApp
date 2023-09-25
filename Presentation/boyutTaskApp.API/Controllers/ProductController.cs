@@ -19,7 +19,7 @@ public class ProductController : ControllerBase
     {
         _mediator = mediator;
     }
-    
+    [GenericAuthorize("Admin")]
     [HttpGet("list-all")]
     public async Task<IActionResult> GetAll()
     {
@@ -27,21 +27,21 @@ public class ProductController : ControllerBase
         return Ok(response);
          
     }
-    
+    [GenericAuthorize("Admin")]
     [HttpPost("create")]
     public async Task<IActionResult> Post(CreateProductRequest createProductRequest)
     {
         var response =  await _mediator.Send(createProductRequest);
         return Ok(new BaseResponse<CreateProductResponse>(response));
     }
-    
+    [GenericAuthorize("Admin")]
     [HttpPost("create-group")]
     public async Task<IActionResult> Post(CreateProductGroupRequest createProductGroupRequest)
     {
         var response =  await _mediator.Send(createProductGroupRequest);
         return Ok(new BaseResponse<CreateProductGroupResponse>(response));
     }
-    
+    [GenericAuthorize("Admin")]
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(string id)
     {
