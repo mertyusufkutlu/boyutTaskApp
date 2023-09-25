@@ -48,7 +48,7 @@
 
 - Step23) Burada yine aynı şekilde bütün roller admin için Assign edilir name kısmına basmamız yeterlidir sonrasında Assign butonuna basıp kaydedebiliriz
 
-- Step24 SONSTEP) Step10'dan kopayalanan client secret değeri resimdeki gibi appsettings.json içeriinse yazılır. ve doğruluğu kontrol edilir.
+- Step24 SONSTEP) Step10'dan kopayalanan client secret değeri resimdeki gibi appsettings.json içeriinse yazılır ve doğruluğu kontrol edilir.
 
 **Geri kalan ayarlar aynı olduğu için KeyCloak kurulumumuz hazır artık /api/User/create API'sine istek atılıp yeni kullanıcı oluşturulabilir.
 
