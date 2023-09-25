@@ -10,22 +10,9 @@
 
 - Sonrasında KeyCloak,REDIS ve PostgtreSQL için Docker Desktop'da ayağa kalıdırıp kurulumları yapılmalıdır.
 
-- InstallationDocument adlı dosyada step step nasıl kurulum yapılması gerektiği açıklanmaktadır.
+- InstallationDocument adlı dosyanın altında DocReadMe.md içerisnde step step nasıl kurulum yapılması gerektiği açıklanmaktadır.
 
 ***Verilen task için tüm API'lerin açıklaması aşağıda mevcuttur*** :
-
-## Yeni kullanıcı oluşturma
-```http
-  POST /api/User/create
-```
-
-| Parametre | Tip     | Açıklama                |
-| :-------- | :------- | :------------------------- |
-| `phoneNumber` | `string` | Yeni kayıt için numarası |
-| `password` | `string` | Kullanıcı parolası |
-| `email` | `string` | Kullanıcı email adresi |
-#### Açıklama
-- Bu API yeni kullanıcı oluşturmak içindir ilk başta DB'de bir kayıt oluşturur sonrasında ise KeyCloak tarafında karşılığını oluşturarak eşleştirilir.
 
 
 ## SMS Gönderme
@@ -79,6 +66,19 @@
 
 #### Açıklama
 - Herhangi bir paratmere olmadan {} boş body şeklinde yollanır KeyCloak için master-user üzerinden token alıp REDIS'e key-value olarak yazar. Authorize gerekir.
+
+## Yeni kullanıcı oluşturma
+```http
+  POST /api/User/create
+```
+
+| Parametre | Tip     | Açıklama                |
+| :-------- | :------- | :------------------------- |
+| `phoneNumber` | `string` | Yeni kayıt için numarası |
+| `password` | `string` | Kullanıcı parolası |
+| `email` | `string` | Kullanıcı email adresi |
+#### Açıklama
+- Bu API yeni kullanıcı oluşturmak içindir ilk başta DB'de bir kayıt oluşturur sonrasında ise KeyCloak tarafında karşılığını oluşturarak eşleştirilir.
 
 
 ## Oturum Açma
