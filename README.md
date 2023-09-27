@@ -199,3 +199,19 @@
 #### Açıklama
 - Ürün silmek için sadece ilgili ürünün Guid değerini girmek yeterlidir.
 
+
+
+## Sipariş tamamlama
+```http
+  POST /api/Order/create
+```
+
+| Parametre | Tip     | Açıklama                |
+| :-------- | :------- | :------------------------- |
+| `basketId` | `uuid` | basketId'si Guid |
+| `description` | `string` | açıklama |
+| `adress` | `string` | açık adress |
+
+#### Açıklama
+- Order'ı tamamlamak için basketId'yi girmemiz gerekmektedir sonrasında stok'dan azaltma işlemleri mantığı çalışacaktır ve order tamamlanacaktır.
+
