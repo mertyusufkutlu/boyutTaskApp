@@ -201,7 +201,7 @@
 
 
 
-## Sipariş tamamlama
+## Sipariş oluşturma
 ```http
   POST /api/Order/create
 ```
