@@ -18,7 +18,6 @@ C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Application\bin\Debug
 C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Application\bin\Debug\net6.0\boyutTaskApp.Application.dll
 C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Application\bin\Debug\net6.0\boyutTaskApp.Application.pdb
 C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Application\bin\Debug\net6.0\boyutTaskApp.Domain.dll
-C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Application\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Abstractions.dll
 C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Application\bin\Debug\net6.0\boyutTaskApp.Domain.pdb
 C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Application\obj\Debug\net6.0\boyutTaskApp.Application.csproj.AssemblyReference.cache
 C:\Users\Mert\RiderProjects\boyutTaskApp\Core\boyutTaskApp.Application\obj\Debug\net6.0\boyutTaskApp.Application.GeneratedMSBuildEditorConfig.editorconfig

@@ -10,13 +10,13 @@ namespace boyutTaskAppAPI.Persistence.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.EnsureSchema(
-                name: "sg_be");
+                name: "boyut_be");
 
             migrationBuilder.RenameTable(
                 name: "User",
                 schema: "boyut_be",
                 newName: "User",
-                newSchema: "sg_be");
+                newSchema: "boyut_be");
 
             migrationBuilder.CreateTable(
                 name: "Customer",
@@ -121,7 +121,7 @@ namespace boyutTaskAppAPI.Persistence.Migrations
                     table.ForeignKey(
                         name: "FK_CustomerBasket_User_UserId",
                         column: x => x.UserId,
-                        principalSchema: "sg_be",
+                        principalSchema: "boyut_be",
                         principalTable: "User",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -213,7 +213,7 @@ namespace boyutTaskAppAPI.Persistence.Migrations
 
             migrationBuilder.RenameTable(
                 name: "User",
-                schema: "sg_be",
+                schema: "boyut_be",
                 newName: "User",
                 newSchema: "boyut_be");
         }

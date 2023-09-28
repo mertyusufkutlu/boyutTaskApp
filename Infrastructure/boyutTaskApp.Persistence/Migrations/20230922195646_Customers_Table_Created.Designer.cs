@@ -177,7 +177,7 @@ namespace boyutTaskAppAPI.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("User", "sg_be");
+                    b.ToTable("User", "boyut_be");
                 });
 
             modelBuilder.Entity("OrderProduct", b =>
